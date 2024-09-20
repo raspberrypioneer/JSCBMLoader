@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="styles.css"> 
+	<script src="index.js"></script>
+	<script src="cbmloader.js"></script>
+	<script src="prgdriver.js"></script>
+	<script src="d64driver.js"></script>
+	<script src="t64driver.js"></script>
+	<script src="resources/info_c64.js"></script>
+	<script src="resources/info_vic20.js"></script>
+	<title>Commodore Loader</title>
+	<link rel="icon" type="image/x-icon" href="./resources/favicon.ico">
+</head>
+
+<body>
+
+	<section class="layout">
+		<div class="header">
+			<img id="imgLogo" alt="Logo" class="logo-class">
+		</div>
+		<div class="rightHeader">
+			<div id="divProgressBar" class="progress-bar-class" style="display: none;">
+				<div id="divTitle"></div>
+				<div id="divProgress" class="progress-class"></div>
+			</div>
+		</div>
+		<div class="leftSide">
+			<img id="imgHome" src="./resources/logo_home.png" title="Home" alt="Home" class="image-action-class">
+			<br/>
+			<img id="imgFileSelect" src="./resources/files-empty.png" title="Open files" alt="Open files" class="image-action-class">
+			<input type="file" id="fileInput" title="Choose files" multiple accept=".prg, .d64, .t64">
+			<br/>
+			<img id="imgConnect" src="./resources/usb-disconnected.png" title="Connect" alt="Connect" class="image-action-class">
+			<br/>
+			<img id="imgWeb" src="./resources/search-web.png" title="Search web" alt="Search web" class="image-action-class">
+		</div>
+		<div class="body">
+			<select id="selProgList" size="30" title="Select program" class="select-class"></select>
+		</div>
+		<div class="rightSide" style="position: relative;">
+			<img id="imgArt" src="" title="Program artwork" alt="Program artwork" class="art-class" style="display: none;">
+			<div id="divDirectory" style="position: absolute; top: 8px; left: 16px; display: none;"></div>
+			<div id="divInfo" style="padding-left: 10px;"></div>
+		</div>
+		<div class="footer">
+			<div id="divReceivedMsg" style="padding-left: 5px;"></div>
+		</div>
+	</section>
+
+</body>
+
+</html>

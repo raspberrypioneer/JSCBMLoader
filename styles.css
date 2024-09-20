@@ -1,0 +1,93 @@
+body {
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 12pt;
+  line-height: normal;
+  max-width: max-content;
+  background-color: darkgrey;
+}
+
+.layout {
+  display: grid;
+  justify-content: start;
+  grid:
+    "leftSide header rightHeader"
+    "leftSide body rightSide"
+    "leftSide footer footer";
+  gap: 5px;
+}
+
+.header { grid-area: header; }
+.rightHeader { grid-area: rightHeader; }
+.leftSide { grid-area: leftSide; }
+.body { grid-area: body; }
+.rightSide { grid-area: rightSide; }
+.footer { grid-area: footer; }
+
+input[type="file"] {
+  display: none;
+}
+
+.select-class {
+  min-width: 35ch;
+  max-width: 35ch;
+  border: none;
+  overflow-y: auto;
+  padding-top: 10px;
+  padding-left: 10px;
+  font-size: 12pt;
+  cursor: pointer;
+  background-color: beige;
+}
+
+.image-action-class {
+  margin: 5px;
+  cursor: pointer;
+}
+
+.logo-class {
+  margin: 5px;
+  cursor: pointer;
+}
+
+.pre-fixed-class {
+  font-family: "Courier New", monospace;
+  font-size: 11pt;
+  font-weight: bold;
+  color: white;
+}
+
+.art-class {
+  margin: 5px;
+  width: 400px;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.art-class.fade {
+  opacity: 0.15;
+}
+
+.art-class.show {
+  opacity: 1;
+}
+
+.progress-bar-class {
+  width: 400px;
+  height: 30px;
+  margin: 5px;
+  position: relative;
+  text-align: center;
+  line-height: 30px;
+  color: black;
+  background-color: beige;
+}
+
+.progress-class {
+  width: 0%;
+  height: 30px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0.5;
+  background-color: darkgreen;
+}
