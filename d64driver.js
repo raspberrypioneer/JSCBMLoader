@@ -118,7 +118,7 @@ class d64driver {
     //Open program by finding it
     async openProgram(bytesProgName) {
 
-        let progName = String.fromCharCode(...bytesProgName).replace("\r", "").replace("\n", "");
+        let progName = String.fromCharCode(...bytesProgName).replace("\r", "").replace("\n", "").trim();
         let found = this.#findProgram(progName);
 
         //Match not found, try again with less strict criteria
